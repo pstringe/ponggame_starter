@@ -25,6 +25,8 @@ class Paddle:
     canvas.move(self.id, 200, 200)
     
     # 2. add keybindings to initialization function
+    self.canvas.bind_all('<KeyPress-Left>', self.goRight)
+    
 
   # 1. move goLeft and goRight methods into Paddle class
   def goLeft(e):
