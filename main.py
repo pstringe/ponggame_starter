@@ -25,19 +25,17 @@ class Paddle:
     canvas.move(self.id, 200, 200)
     
     # 2. add keybindings to initialization function
-    
+
   # 1. move goLeft and goRight methods into Paddle class
-  
-  '''
   def goLeft(e):
       x = -10
 
   def goRight(e):
       x = 10
-  '''
+
   # define update_position function
-  
-   
+
+
 paddle = Paddle(canvas) #create a paddle
 
 while True:
