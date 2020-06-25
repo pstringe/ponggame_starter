@@ -10,11 +10,11 @@ canvas = Canvas(tk, width=800, height=600)
 canvas.pack()
 
 ##################################
-# Lesson 3 Objectives
-## Learn about OOP
-## experiment with classes
-## use the arrow keys to trigger movment
-## define two funcitons for left and right movement
+# Lesson 4 Objectives
+## add go left and go_right methods
+## add keybindings
+## define updat_postion funtion
+
 
 ##################################
 
