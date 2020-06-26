@@ -23,6 +23,9 @@ class Paddle:
   def __init__(self, i_canvas):
     self.x = 0
     self.canvas = i_canvas
+
+    # 3. Define canvas_width
+    self.canvas_width = 800
     self.id = canvas.create_rectangle(0, 0, 200, 10, fill='black')
     self.canvas.move(self.id, 200, 200)
     
@@ -38,11 +41,30 @@ class Paddle:
   # define update_position function
   def update_position(self):
       self.canvas.move(self.id, self.x, 0)
+      
+      # 1. save the current position in a variable
+      position = self.canvas.coords(self.id)
 
+      # 2. add a condition for setting x to 0, stopping the paddle
+      if position[0] < 0:
+          self.x = 0
+      elif position[2] > self.canvas_width:
+          self.x = 0
+
+# 5. Define the ball class
+
+## Define the initialization function
+
+## Define the update postition function
+
+### add hit platform conditional to ball function.
+
+## Define the collision function
 paddle = Paddle(canvas) #create a paddle
 
 while True:
     tk.update_idletasks()
+    # 6. Update Ball Position
 
     paddle.update_position()
     tk.update()
