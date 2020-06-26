@@ -24,28 +24,25 @@ class Paddle:
     self.x = 0
     self.canvas = i_canvas
     self.id = canvas.create_rectangle(0, 0, 200, 10, fill='black')
-    canvas.move(self.id, 200, 200)
-    # key bindings
+    self.canvas.move(self.id, 200, 200)
+    
     self.canvas.bind_all('<KeyPress-Left>', self.goLeft)
     self.canvas.bind_all('<KeyPress-Right>', self.goRight)
-    
-    
-  
+
   def goLeft(self, e):
-      self.x = -2
+      self.x = -10
 
   def goRight(self, e):
-      self.x = 2
+      self.x = 10
 
   # define update_position function
   def update_position(self):
       self.canvas.move(self.id, self.x, 0)
-   
+
 paddle = Paddle(canvas) #create a paddle
 
 while True:
     tk.update_idletasks()
 
-    # 4. update the posisiton of the paddle object
     paddle.update_position()
     tk.update()
